@@ -159,9 +159,7 @@ function renderFooterSocial() {
 
 // Profile picture handling
 function initProfilePicture() {
-  const profileFrame = document.getElementById('profile-frame');
   const profileImage = document.getElementById('profile-image');
-  const profileInput = document.getElementById('profile-input');
   const profilePath = 'assets/images/profile.jpg';
 
   // Try to load existing profile picture
@@ -174,40 +172,6 @@ function initProfilePicture() {
     profileImage.innerHTML = '<div class="profile-placeholder">ADD PHOTO</div>';
   };
   img.src = profilePath;
-
-  // Check localStorage for preview
-  try {
-    const savedImage = localStorage.getItem('egoist-profile-preview');
-    if (savedImage) {
-      profileImage.innerHTML = `<img src="${savedImage}" alt="EGOIST profile picture (preview)">`;
-    }
-  } catch (e) {
-    // localStorage might be disabled
-  }
-
-  // Click to upload
-  if (profileFrame && profileInput) {
-    profileFrame.addEventListener('click', () => {
-      profileInput.click();
-    });
-
-    profileInput.addEventListener('change', (e) => {
-      const file = e.target.files[0];
-      if (file && file.type.startsWith('image/')) {
-        const reader = new FileReader();
-        reader.onload = (event) => {
-          try {
-            localStorage.setItem('egoist-profile-preview', event.target.result);
-            profileImage.innerHTML = `<img src="${event.target.result}" alt="EGOIST profile picture (preview)">`;
-            showToast('Profile preview saved (local only)');
-          } catch (err) {
-            showToast('Preview saved (localStorage unavailable)');
-          }
-        };
-        reader.readAsDataURL(file);
-      }
-    });
-  }
 }
 
 // Toast notification

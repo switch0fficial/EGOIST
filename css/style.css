@@ -358,13 +358,8 @@ body {
   width: 200px;
   height: 200px;
   margin: 0 auto;
-  cursor: pointer;
   transform-style: preserve-3d;
   transition: transform 0.3s ease;
-}
-
-.profile-frame:hover {
-  transform: scale(1.05);
 }
 
 .profile-image {
