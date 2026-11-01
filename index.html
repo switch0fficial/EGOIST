@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EGOIST | Blood Strike Content Creator</title>
+  <meta name="description" content="EGOIST - Verified Blood Strike Content Creator. Funny clips, cinematic edits on TikTok and YouTube.">
+  <meta property="og:title" content="EGOIST | Blood Strike Content Creator">
+  <meta property="og:description" content="Verified Blood Strike Content Creator. Funny clips, cinematic edits.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EGOIST | Blood Strike Content Creator">
+  <meta name="theme-color" content="#0b0807">
+  <link rel="icon" type="image/png" href="assets/images/pfp.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Boot Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-terminal">
+      <div class="terminal-text">EGOIST // SYSTEM BOOT</div>
+      <div class="terminal-scramble"></div>
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+    </div>
+    <div class="letterbox letterbox-top"></div>
+    <div class="letterbox letterbox-bottom"></div>
+  </div>
+
+  <!-- 3D Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- CSS Overlays -->
+  <div class="scanlines"></div>
+  <div class="film-grain"></div>
+  <div class="vignette"></div>
+  <div class="hud-frame"></div>
+  <div class="side-progress">
+    <div class="progress-dot active" data-section="0"></div>
+    <div class="progress-dot" data-section="1"></div>
+    <div class="progress-dot" data-section="2"></div>
+    <div class="progress-dot" data-section="3"></div>
+    <div class="progress-dot" data-section="4"></div>
+  </div>
+
+  <!-- Custom Cursor (Desktop) -->
+  <div class="custom-cursor">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main">
+    <!-- Hero Section -->
+    <section id="hero" class="section hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <div class="profile-wrapper">
+            <div class="profile-frame" id="profile-frame">
+              <div class="profile-image" id="profile-image">
+                <div class="profile-placeholder">ADD PHOTO</div>
+              </div>
+              <div class="hud-corner tl"></div>
+              <div class="hud-corner tr"></div>
+              <div class="hud-corner bl"></div>
+              <div class="hud-corner br"></div>
+              <div class="rotating-ring"></div>
+            </div>
+            <input type="file" id="profile-input" accept="image/*" style="display: none;">
+          </div>
+
+          <h1 class="hero-title">
+            <span class="title-main">EGOIST</span>
+            <span class="title-glitch">EGOIST</span>
+            <span class="title-glitch">EGOIST</span>
+            <span class="verified-badge">
+              <svg viewBox="0 0 24 24" width="20" height="20">
+                <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              VERIFIED
+            </span>
+          </h1>
+
+          <p class="hero-subtitle">Verified Blood Strike Content Creator</p>
+          <p class="hero-tagline">Funny clips. Cinematic edits. TikTok + YouTube.</p>
+
+          <div class="cta-buttons">
+            <a href="#" class="cta-button" data-platform="tiktok" aria-label="Follow EGOIST on TikTok">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+              Follow on TikTok
+            </a>
+            <a href="#" class="cta-button" data-platform="youtube" aria-label="Subscribe to EGOIST on YouTube">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              Subscribe on YouTube
+            </a>
+            <a href="#" class="cta-button" data-platform="whatsapp" aria-label="Join EGOIST WhatsApp Channel">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+              Join WhatsApp Channel
+            </a>
+          </div>
+
+          <div class="hud-details">
+            <div class="hud-item">
+              <span class="rec-dot"></span>
+              <span class="rec-label">REC</span>
+            </div>
+            <div class="hud-item timecode">00:00:00:00</div>
+            <div class="hud-item coords">34.0522° N, 118.2437° W</div>
+            <div class="scroll-indicator">SCROLL TO INFILTRATE</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="marquee">
+        <div class="marquee-content">
+          <span>BLOOD STRIKE</span>
+          <span>//</span>
+          <span>FUNNY CLIPS</span>
+          <span>//</span>
+          <span>EDITS</span>
+          <span>//</span>
+          <span>VERIFIED CREATOR</span>
+          <span>//</span>
+          <span>EGOIST</span>
+          <span>//</span>
+          <span>BLOOD STRIKE</span>
+          <span>//</span>
+          <span>FUNNY CLIPS</span>
+          <span>//</span>
+          <span>EDITS</span>
+          <span>//</span>
+          <span>VERIFIED CREATOR</span>
+          <span>//</span>
+          <span>EGOIST</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Funny Clips Section -->
+    <section id="clips" class="section clips-section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="title-text">FUNNY CLIPS</span>
+          <span class="title-line"></span>
+        </h2>
+        <div class="clips-grid" id="clips-grid">
+          <!-- Clips populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Edits Section -->
+    <section id="edits" class="section edits-section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="title-text">EDITS</span>
+          <span class="title-line"></span>
+        </h2>
+        <div class="clips-grid" id="edits-grid">
+          <!-- Edits populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Join Section -->
+    <section id="join" class="section join-section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="title-text">JOIN THE SQUAD</span>
+          <span class="title-line"></span>
+        </h2>
+        <div class="join-cards" id="join-cards">
+          <!-- Cards populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Business Section -->
+    <section id="business" class="section business-section">
+      <div class="container">
+        <div class="terminal-panel">
+          <div class="terminal-header">
+            <span class="terminal-title">BUSINESS INQUIRIES</span>
+            <div class="terminal-controls">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="terminal-body">
+            <p class="terminal-text">DM for business only.</p>
+            <div class="email-display" id="email-display"></div>
+            <div class="email-actions">
+              <a href="#" class="terminal-button" id="email-send">Send email</a>
+              <button class="terminal-button" id="email-copy">Copy email</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">EGOIST</div>
+          <div class="footer-social" id="footer-social">
+            <!-- Social links populated by JS -->
+          </div>
+          <p class="footer-copy">&copy; <span id="current-year"></span> EGOIST</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <span class="toast-text"></span>
+  </div>
+
+  <!-- Bulletproof Preloader Failsafe (Classic Script - runs immediately) -->
+  <script>
+    (function() {
+      var preloader = document.getElementById('preloader');
+      var hidden = false;
+
+      function hidePreloader() {
+        if (hidden || !preloader) return;
+        hidden = true;
+        preloader.style.opacity = '0';
+        preloader.style.pointerEvents = 'none';
+        setTimeout(function() {
+          preloader.style.display = 'none';
+        }, 500);
+      }
+
+      // Hide after 4 seconds max
+      setTimeout(hidePreloader, 4000);
+
+      // Hide on any error
+      window.addEventListener('error', hidePreloader);
+      window.addEventListener('unhandledrejection', hidePreloader);
+
+      // Click to skip
+      if (preloader) {
+        preloader.addEventListener('click', hidePreloader);
+      }
+    })();
+  </script>
+
+  <!-- Import Map -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+
+  <!-- Scripts (main only - it imports the others) -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
